@@ -3,7 +3,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Tela de Login</title>
+  <title>Login | Rick and Morty API</title>
+  <link rel="icon" href="assets/imagens/favicon.ico.ico" type="image/x-icon">
   <style>
     html, body {
       margin: 0;
@@ -16,7 +17,6 @@
       z-index: 0;
     }
 
-    /* Imagem de fundo com transparência */
     body::before {
       content: "";
       position: fixed;
@@ -24,10 +24,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('assets/imagens/rick-and-morty.jpg'); /* imagem Rick and Morty */
+      background-image: url('assets/imagens/rick-and-morty.jpg');
       background-size: cover;
       background-position: center;
-      opacity: 0.5; /* controle da transparência */
+      opacity: 0.5;
       z-index: -1;
     }
 
@@ -37,7 +37,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(30, 30, 30, 0.9); /* fundo com leve opacidade para destacar conteúdo */
+      background-color: rgba(30, 30, 30, 0.9);
       width: 100%;
     }
 
@@ -78,6 +78,7 @@
       border: none;
       margin: 0 auto 10px;
       color: #000;
+      background-color: #f0f0f0;
       display: block;
     }
 
@@ -154,6 +155,15 @@
       font-size: 16px;
       margin: 0;
     }
+
+    /* Mensagem de erro - espaço reservado */
+    .mensagem-erro {
+      color: red;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      display: none; /* será ativado via JavaScript futuramente */
+    }
   </style>
 </head>
 <body>
@@ -162,31 +172,33 @@
     <div class="titulo-login">CONECTE-SE PARA ENTRAR:</div>
 
     <div class="login-box">
-      <form>
+      <form action="#" method="POST" aria-label="Formulário de login">
         <p class="obrigatorio-texto"><span style="color: red;">*</span>campo obrigatório</p>
 
-        <label for="email">*email</label>
-        <input type="email" id="email" placeholder="nome.exemplo@gmail.com" required />
+        <label for="email">*Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="nome.exemplo@gmail.com" required />
 
-        <label for="senha">*senha</label>
-        <input type="password" id="senha" placeholder="insira a sua senha" required />
+        <label for="senha">*Senha</label>
+        <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="insira a sua senha" required />
+
+        <div class="mensagem-erro" id="erro-login">Email ou senha inválidos.</div>
 
         <button type="submit">Entrar</button>
       </form>
 
       <p class="info-text">
-        caso já tenha uma conta, faça login em uma das outras duas plataformas abaixo.
+        Caso já tenha uma conta, faça login em uma das outras duas plataformas abaixo.
       </p>
 
-      <div class="alt-button">
-        <img src="assets/imagens/logo-google.png" alt="Google">
+      <button class="alt-button" type="button">
+        <img src="assets/imagens/logo-google.png" alt="Logo Google">
         <span>Continuar com o Google</span>
-      </div>
+      </button>
 
-      <div class="alt-button">
-        <img src="assets/imagens/logo-github.png" alt="GitHub">
+      <button class="alt-button" type="button">
+        <img src="assets/imagens/logo-github.png" alt="Logo GitHub">
         <span>Continuar com o GitHub</span>
-      </div>
+      </button>
     </div>
 
     <p class="footer-text">Rick and Morty API</p>
@@ -194,9 +206,10 @@
 
   <footer class="rodape">
     <p class="rodape-texto">
-      Descubra seus personagens favoritos da série Rick And Morty, comente sobre eles, adicione aos favoritos e veja o chack-up de cada um!
+      Descubra seus personagens favoritos da série Rick And Morty, comente sobre eles, adicione aos favoritos e veja o check-up de cada um!
     </p>
   </footer>
 
 </body>
 </html>
+
