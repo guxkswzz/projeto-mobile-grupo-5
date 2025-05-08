@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Login | Rick and Morty API</title>
-  <link rel="icon" href="assets/imagens/favicon.ico.ico" type="image/x-icon">
+  <link rel="icon" href="assets/imagens/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
@@ -46,6 +47,7 @@
       font-size: 22px;
       margin-bottom: 20px;
       text-align: center;
+      font-family: 'Orbitron', sans-serif; /* Fonte personalizada */
     }
 
     .login-box {
@@ -172,7 +174,7 @@
     <div class="titulo-login">CONECTE-SE PARA ENTRAR:</div>
 
     <div class="login-box">
-      <form action="#" method="POST" aria-label="Formulário de login">
+      <form id="loginForm" action="#" method="POST" aria-label="Formulário de login">
         <p class="obrigatorio-texto"><span style="color: red;">*</span>campo obrigatório</p>
 
         <label for="email">*Email</label>
@@ -209,6 +211,24 @@
       Descubra seus personagens favoritos da série Rick And Morty, comente sobre eles, adicione aos favoritos e veja o check-up de cada um!
     </p>
   </footer>
+
+  <script>
+    // Função para evitar o recarregamento da página
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio do formulário (não recarrega a página)
+      // Aqui você pode adicionar o código de autenticação
+      alert("Formulário enviado com sucesso!");
+    });
+
+    // Função para garantir que o favicon seja carregado
+    function setFavicon() {
+      var link = document.querySelector("link[rel='icon']");
+      link.href = '/assets/imagens/favicon.ico';
+    }
+
+    // Chama a função para garantir que a favicon seja carregada
+    setFavicon();
+  </script>
 
 </body>
 </html>
