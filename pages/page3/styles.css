@@ -17,7 +17,7 @@ body {
 }
 
 .Formulário{
-    text-align: right;
+    text-align: center;
 }
 
 .tr{
@@ -25,5 +25,14 @@ body {
   bottom: 0;
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 1000px;
+}
+
+.footer{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.escrita{
+    height: 500px;
 }
