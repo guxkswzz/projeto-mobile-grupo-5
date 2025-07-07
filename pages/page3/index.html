@@ -41,16 +41,20 @@
     <div class="Formulário">
         <div id="Formulário">
           
-            <form action="/enviar_formulario" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required> </br>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required></br>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea></br>
-                <input type="submit" value="Enviar">
-            </form>
-            
+          <form class="form">
+            <span class="input-span">
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" id="email"
+            /></span>
+            <span class="input-span">
+              <label for="password" class="label">Senha</label>
+              <input type="password" name="password" id="password"
+            /></span>
+            <span class="span"><a href="#">Esqueceu sua senha?</a></span>
+            <input class="submit" type="submit" value="Log in" />
+            <span class="span">Não tem uma conta? <a href="#">Inscrever-se</a></span>
+          </form>
+          
         </div>
     </div>
 
@@ -60,8 +64,7 @@
          <p>© 2025</p>
          <p>Entre em contato:</p>
          <p>rick.and.morty.api@escola.pr.gov.br</p>
-         <p>(55) 98422-3666</p>
-         <p>Criadores: Gustavo Ananias; Ashy Robsmary; Diego Gabriel; Anna Helloiza; Davi Ribeiro, 2°D</p>
+         <p>(41) 98422-3666</p>
 
      </table>
    </footer>
