@@ -261,6 +261,16 @@ h2, p{
   color: white;
 }
  
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  width: 100%;
+  padding: 20px;
+}
+
+
 .form {
   --bg-light: #efefef;
   --bg-dark: #707070;
